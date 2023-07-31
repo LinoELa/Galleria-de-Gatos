@@ -1,0 +1,44 @@
+/* Normaliza tu modelo de caja creando un selector * y estableciendo la propiedad box-sizing con el valor border-box. */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background:#ffa07a;
+}
+
+.header{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    color: #fff;
+    background-color: #0a0a23;
+    border: 4px solid #fdb437;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+.gallery img{
+    width: 100%;
+    max-width: 350px;
+    height: 300px; /* Altura general de las fotos*/
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.gallery::after{
+    content: " ";
+    width: 350px;
+}
